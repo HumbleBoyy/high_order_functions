@@ -1,0 +1,72 @@
+// High order function lesson
+const companies = [
+    {name:"Company One", category:"Finance", start:1951, end:2013},
+    {name:"Company One", category:"Finance", start:1951, end:1993},
+    {name:"Company One", category:"Finance", start:1951, end:2023},
+    {name:"Company Two", category:"Cars", start:1985, end:2005},
+    {name:"Company Three", category:"Ai Tech", start:1991, end:2016},
+    {name:"Company Four", category:"Retail", start:1910, end:2010},
+    {name:"Company Five", category:"Technology", start:1921, end:2024},
+    {name:"Company Six", category:"Education", start:1966, end:2006},
+    {name:"Company Seven", category:"Construction", start:1999, end:2009},
+    {name:"Company Eight", category:"Tourism", start:1978, end:2018},
+    {name:"Company Nine", category:"Accounting", start:1970, end:2020},
+]
+
+const ages = [33, 12, 20, 16, 5, 10, 56, 21, 43, 62, 92, 102, 321,];
+
+// for(let i = 0; i < companies.length; i++){
+//     console.log(companies[i]);
+// }
+
+// forEach
+// companies.forEach((company)=> {
+//   console.log(company)
+// })
+
+
+
+// filter
+// let canDrink = [];
+// for(let i = 0; i < ages.length; i++){
+//     if(ages[i] >= 21){
+//         canDrink.push(ages[i]);
+//     }
+// }
+// console.log(canDrink)
+
+// const canDrinks = ages.filter(function(age){
+//     if(age >= 21){
+//         return true;
+//     }
+// })
+// console.log(canDrinks)
+
+// const canDrunk = ages.filter(age => age >= 21);
+// console.log(canDrunk)
+
+// filter the retail companies
+// const retailCompanies = companies.filter(function(company){
+//     if(company.category === 'Finance'){
+//         return true
+//     }
+// })
+
+// console.log(retailCompanies);
+
+// const retailCompanies = companies.filter(company => company.category === "Retail")
+
+// console.log(retailCompanies);
+
+function higherOrder(fn) {
+    fn();
+    }
+    higherOrder(function() { console.log("Hello world") });
+    function doSomething() {
+        console.log(this);
+        }
+        doSomething();
+        
+//map
+//sort
+//reduce
