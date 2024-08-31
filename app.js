@@ -58,15 +58,52 @@ const ages = [33, 12, 20, 16, 5, 10, 56, 21, 43, 62, 92, 102, 321,];
 
 // console.log(retailCompanies);
 
-function higherOrder(fn) {
-    fn();
-    }
-    higherOrder(function() { console.log("Hello world") });
-    function doSomething() {
-        console.log(this);
-        }
-        doSomething();
-        
+// Get 80s companies
+
+const eightysCompanies = companies.filter(company => (company.start >=1980 && company.start < 1990));
+
+// Get companies that lasted 10 years or more
+const lastedTenYears = companies.filter(company => (company.end - company.start > 10));
+
+
 //map
+const companyNames = companies.map(function(company){
+     return company.name
+})
 //sort
-//reduce
+// const sortedCompany = companies.sort(function(c1, c2){
+//     if(c1.start > c2.start){
+//          return 1;
+//     }else{
+//         return -1;
+//     }
+// })
+
+// console.log(sortedCompany)
+
+// const sortAges = ages.sort((a,b) => a-b);
+// console.log(sortAges)
+
+
+
+//Reduce
+let ageSums = 0;
+for(let i = 0; i < ages.length; i ++){
+    ageSums += ages[i];
+}
+
+
+
+const ageSum = ages.reduce(function(total, age){
+    return total + age;
+}, 0);
+
+
+// Combined Methods
+const combined = ages
+.map(age => age * 2)
+.filter(age => age >= 40)
+.sort((a, b) => a - b)
+.reduce((a, b) => a + b, 0);
+
+console.log(combined)
