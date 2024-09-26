@@ -67,9 +67,9 @@ const lastedTenYears = companies.filter(company => (company.end - company.start 
 
 
 //map
-const companyNames = companies.map(function(company){
-     return company.name
-})
+// const companyNames = companies.map(function(company){
+//      return company.name
+// })
 //sort
 // const sortedCompany = companies.sort(function(c1, c2){
 //     if(c1.start > c2.start){
@@ -87,23 +87,23 @@ const companyNames = companies.map(function(company){
 
 
 //Reduce
-let ageSums = 0;
-for(let i = 0; i < ages.length; i ++){
-    ageSums += ages[i];
-}
+// let ageSums = 0;
+// for(let i = 0; i < ages.length; i ++){
+//     ageSums += ages[i];
+// }
 
 
 
-const ageSum = ages.reduce(function(total, age){
-    return total + age;
-}, 0);
+// const ageSum = ages.reduce(function(total, age){
+//     return total + age;
+// }, 0);
 
 
 // Combined Methods
-const combined = ages
-.map(age => age * 2)
-.filter(age => age >= 40)
-.sort((a, b) => a - b)
-.reduce((a, b) => a + b, 0);
+// const combined = ages
+// .map(age => age * 2)
+// .filter(age => age >= 40)
+// .sort((a, b) => a - b)
+// .reduce((a, b) => a + b, 0);
 
-console.log(combined)
+// console.log(combined)
