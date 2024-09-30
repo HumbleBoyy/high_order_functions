@@ -13,3 +13,54 @@ const companies = [
 ]
 
 const ages = [33, 12, 20, 16, 5, 10, 56, 21, 43, 62, 92, 102, 321,];
+
+
+// Filter
+/* 
+   The filter method in JavaScript is designed as a higher-order function that iterates over each element of an array, 
+   allowing developers to apply a specific condition to filter out elements.
+*/
+
+
+// filtering things out with for loop
+let canDrink = [];
+for(let i = 0; i < ages.length; i ++){
+    if(ages[i] >= 28){
+        canDrink.push(ages[i])
+    }
+}
+
+console.log(canDrink)
+
+// Filter
+const canHedrink = ages.filter((age)=> {
+    if(age >= 21){
+        return true
+    }
+})
+
+console.log(`The list of ages that shows from what age you can buy adult type drinks legally\n
+${canHedrink}`)
+
+
+// Filter retail companies
+const retailCompanies = companies.filter((company)=> {
+    if(company.category === 'Finance'){
+        return true
+    }
+})
+
+console.log(retailCompanies)
+
+
+
+// Get 80s Companies
+const eightiesCompanies = companies.filter(company => (company.start >= 
+    1950 && company.start < 2000
+))
+
+console.log(eightiesCompanies)
+
+// Get the companies that lasted 10 years or more
+const lastedTenYears = companies.filter(company => (company.end - company.start >= 10))
+console.log(lastedTenYears);
