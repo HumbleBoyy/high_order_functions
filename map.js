@@ -15,8 +15,15 @@ const companies = [
 const ages = [33, 12, 20, 16, 5, 10, 56, 21, 43, 62, 92, 102, 321,];
 
 // Map
-// Create array of company names
 
+/*
+  In JavaScript, map() is a method of the Array object. 
+  It creates a new array by calling a function on every 
+  element of the original array and storing the results in a new array. 
+  map() returns the new array, and the original array is unchanged.
+*/
+
+// Create array of company names
 const companyNames = companies.map((company)=> {
       return company.name
 })
